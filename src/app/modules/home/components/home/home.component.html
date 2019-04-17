@@ -1,0 +1,17 @@
+<div class="row">
+  <div class="dash-board-gradient col-12"></div>
+  <div class="header-container row">
+    <!-- NavBar -->
+    <div class="title"translate="common.title"></div>
+    <button mat-button [matMenuTriggerFor]="belowMenu">Ho Chi Minh City</button>
+    <mat-menu #belowMenu="matMenu" yPosition="below">
+      <button mat-menu-item>Item 1</button>
+      <button mat-menu-item>Item 2</button>
+    </mat-menu>
+    <button mat-button [matMenuTriggerFor]="belowMenu">English</button>
+    <mat-menu #belowMenu="matMenu" yPosition="below">
+      <button mat-menu-item>Gemany</button>
+      <button mat-menu-item>Japan</button>
+    </mat-menu>
+  </div>
+</div>

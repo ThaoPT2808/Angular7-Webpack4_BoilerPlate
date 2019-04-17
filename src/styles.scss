@@ -1,0 +1,19 @@
+/* You can add global styles to this file, and also import other style files */
+// vendor
+@import "assets/scss/vendor/bootstrap";
+// Base
+@import "assets/scss/base/global";
+// Plugins
+@import "assets/scss/plugins/plugins";
+// Variables
+@import "assets/scss/variables/theme";
+// Theme
+@include mat-core();
+// Include theme styles for core and each component used in your app.
+@include angular-material-theme($default-theme);
+// Partial
+@import "assets/scss/partials/animation";
+@import "assets/scss/partials/flex-utils";
+
+html, body { height: 100%; }
+body { margin: 0; }

@@ -1,0 +1,11 @@
+
+
+@import '~@angular/material/theming';
+
+// Palettes
+$primary: mat-palette($mat-blue-grey);
+$accent: mat-palette($mat-cyan);
+$warn: mat-palette($mat-red);
+
+// Create the theme object (a Sass map containing all of the palettes).
+$default-theme: mat-light-theme($primary, $accent, $warn);

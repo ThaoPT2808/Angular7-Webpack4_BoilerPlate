@@ -1,0 +1,12 @@
+:host {
+    display: block;
+    width: 100%;
+    .title{
+        margin: 20px;
+    }
+    .dash-board-gradient {
+        height: 30px;
+        background-color: #3b8d99;
+        background-image: linear-gradient(-90deg, #3b8d99,#6b6b83, #aa4b6b);
+    }
+}

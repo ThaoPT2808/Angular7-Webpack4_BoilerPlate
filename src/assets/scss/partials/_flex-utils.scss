@@ -1,0 +1,6 @@
+// FPT: FSF-scss Core
+// File: Define flex variables
+
+@for $i from 1 through 20 {
+    .flex-#{$i} { flex: $i !important; }
+}

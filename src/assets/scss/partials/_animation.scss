@@ -1,0 +1,8 @@
+// FPT: FSF-scss Core
+// File: Define animation
+
+@mixin transition($time) {
+    -webkit-transition: $time;
+    transition: $time;
+    transition-timing-function: ease-out;
+}
