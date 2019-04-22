@@ -1,8 +1,8 @@
 Arguments: 
-  C:\Program Files\nodejs\node.exe C:\Program Files (x86)\Yarn\bin\yarn.js install
+  C:\Program Files\nodejs\node.exe C:\Program Files (x86)\Yarn\bin\yarn.js add ts-loader --save-dev
 
 PATH: 
-  C:\Program Files (x86)\Common Files\Oracle\Java\javapath;C:\Program Files\Microsoft Power BI Desktop\lib;C:\Oracle\Client\bin;C:\WINDOWS\system32;C:\WINDOWS;C:\WINDOWS\System32\Wbem;C:\WINDOWS\System32\WindowsPowerShell\v1.0\;C:\WINDOWS\System32\OpenSSH\;C:\Program Files\7-Zip;C:\Program Files (x86)\Plantronics\Spokes3G\;C:\Program Files\Git\cmd;C:\Program Files\Microsoft SQL Server\Client SDK\ODBC\110\Tools\Binn\;C:\Program Files (x86)\Microsoft SQL Server\120\Tools\Binn\;C:\Program Files\Microsoft SQL Server\120\Tools\Binn\;C:\Program Files\Microsoft SQL Server\120\DTS\Binn\;C:\Program Files (x86)\Microsoft SQL Server\120\Tools\Binn\ManagementStudio\;C:\Program Files (x86)\Microsoft SQL Server\120\DTS\Binn\;C:\Working\BigSol0.6\BigSol-0.0.2\spark-2.4.0-bin-hadoop2.6\bin;%JAVA_HOME%\bin;C:\Program Files\nodejs\;C:\Program Files (x86)\Yarn\bin\;%APPDATA%\npm;C:\Users\PUN2HC\AppData\Local\Microsoft\WindowsApps;C:\Users\PUN2HC\AppData\Local\Programs\Microsoft VS Code\bin;C:\Working\BigSol0.6\BigSol-0.0.2\hadoop-3.1.1\bin;C:\Working\BigSol0.6\BigSol-0.0.2\livy-0.5.0-incubating-bin\bin\bin;C:\Program Files\Java\jdk1.8.0_201\bin;C:\Users\PUN2HC\AppData\Roaming\npm;C:\Users\PUN2HC\AppData\Local\Yarn\bin
+  C:\Program Files (x86)\Common Files\Oracle\Java\javapath;C:\Program Files\Microsoft Power BI Desktop\lib;C:\Oracle\Client\bin;C:\WINDOWS\system32;C:\WINDOWS;C:\WINDOWS\System32\Wbem;C:\WINDOWS\System32\WindowsPowerShell\v1.0\;C:\WINDOWS\System32\OpenSSH\;C:\Program Files\7-Zip;C:\Program Files (x86)\Plantronics\Spokes3G\;C:\Program Files\Git\cmd;C:\Program Files\Microsoft SQL Server\Client SDK\ODBC\110\Tools\Binn\;C:\Program Files (x86)\Microsoft SQL Server\120\Tools\Binn\;C:\Program Files\Microsoft SQL Server\120\Tools\Binn\;C:\Program Files\Microsoft SQL Server\120\DTS\Binn\;C:\Program Files (x86)\Microsoft SQL Server\120\Tools\Binn\ManagementStudio\;C:\Program Files (x86)\Microsoft SQL Server\120\DTS\Binn\;C:\Working\BigSol0.6\BigSol-0.0.2\spark-2.4.0-bin-hadoop2.6\bin;%JAVA_HOME%\bin;C:\Program Files\nodejs\;C:\Program Files (x86)\Yarn\bin\;C:\Users\PUN2HC\AppData\Roaming\npm;C:\Users\PUN2HC\AppData\Local\Microsoft\WindowsApps;C:\Users\PUN2HC\AppData\Local\Programs\Microsoft VS Code\bin;C:\Working\BigSol0.6\BigSol-0.0.2\hadoop-3.1.1\bin;C:\Working\BigSol0.6\BigSol-0.0.2\spark-2.4.0-bin-hadoop2.6\bin;C:\Working\BigSol0.6\BigSol-0.0.2\livy-0.5.0-incubating-bin\bin\bin;C:\Program Files\Java\jdk1.8.0_201\bin;C:\Users\PUN2HC\AppData\Roaming\npm;C:\Users\PUN2HC\AppData\Local\Yarn\bin
 
 Yarn version: 
   1.15.2
@@ -14,12 +14,15 @@ Platform:
   win32 x64
 
 Trace: 
-  SyntaxError: C:\Working\stock_data\angular-seed\package.json: Unexpected token } in JSON at position 2034
-      at JSON.parse (<anonymous>)
-      at C:\Program Files (x86)\Yarn\lib\cli.js:1625:59
-      at Generator.next (<anonymous>)
-      at step (C:\Program Files (x86)\Yarn\lib\cli.js:304:30)
-      at C:\Program Files (x86)\Yarn\lib\cli.js:315:13
+  Error: https://registry.yarnpkg.com/ts-loader/-/ts-loader-5.3.3.tgz: tunneling socket could not be established, cause=connect ECONNREFUSED 127.0.0.1:4001
+      at ClientRequest.onError (C:\Program Files (x86)\Yarn\lib\cli.js:141027:17)
+      at Object.onceWrapper (events.js:281:20)
+      at ClientRequest.emit (events.js:193:13)
+      at Socket.socketErrorListener (_http_client.js:397:9)
+      at Socket.emit (events.js:193:13)
+      at emitErrorNT (internal/streams/destroy.js:91:8)
+      at emitErrorAndCloseNT (internal/streams/destroy.js:59:3)
+      at processTicksAndRejections (internal/process/task_queues.js:81:17)
 
 npm manifest: 
   {
@@ -29,9 +32,8 @@ npm manifest:
       "ng": "ng",
       "start": "ng serve",
       "build-dev": "ng build",
-      "start-webpack-sr": "webpack-dev-server",
       "build-prod": "ng build --prod --aot --build-optimizer --vendor-chunk",
-      "build:dev": "webpack-dev-server --inline --hot --progress --port 8081",
+      "build:dev": "webpack-dev-server --inline --progress --port 8081",
       "webpack-prod": "cross-env NODE_ENV=production webpack --mode production",
       "build:prod": "yarn build:clean && ngc && yarn webpack-prod && yarn build:clean",
       "build:clean": "del-cli 'src/**/*.js' 'src/**/*.js.map' 'src/**/*.ngsummary.json' 'src/**/*.metadata.json' 'src/**/**/*.ngfactory.ts' 'src/**/*.ngstyle.ts' 'src/**/*.shim.ts'",
@@ -56,6 +58,9 @@ npm manifest:
       "@ngx-translate/core": "^11.0.1",
       "@ngx-translate/http-loader": "^4.0.0",
       "@types/lodash": "^4.14.123",
+      "angular-router-loader": "^0.8.5",
+      "angular2-template-loader": "^0.6.2",
+      "awesome-typescript-loader": "^5.2.1",
       "bootstrap": "^4.3.1",
       "clean-webpack-plugin": "^2.0.1",
       "core-js": "^2.5.4",
@@ -74,10 +79,7 @@ npm manifest:
       "tslib": "^1.9.0",
       "uglifyjs-webpack-plugin": "^2.1.2",
       "webpack-dev-server": "^3.3.1",
-      "zone.js": "~0.8.26",
-      "angular-router-loader": "^0.8.5",
-      "angular2-template-loader": "^0.6.2",
-      "awesome-typescript-loader": "^5.2.1",
+      "zone.js": "~0.8.26"
     },
     "devDependencies": {
       "@angular-devkit/build-angular": "~0.13.0",
@@ -936,6 +938,20 @@ Lockfile:
     resolved "https://registry.yarnpkg.com/amdefine/-/amdefine-1.0.1.tgz#4a5282ac164729e93619bcfd3ad151f817ce91f5"
     integrity sha1-SlKCrBZHKek2Gbz9OtFR+BfOkfU=
   
+  angular-router-loader@^0.8.5:
+    version "0.8.5"
+    resolved "https://registry.yarnpkg.com/angular-router-loader/-/angular-router-loader-0.8.5.tgz#42b378d0914c1ce412b851c1d92b80dbbe4f2fc5"
+    integrity sha512-8wggCTKGgzB1o8co3Wvj+p9pKN7T7q3C477lEz3NLjvPVzUti8rv9i45Di+4aO/k+HvzGh3s8QdNlXU2Bl4avQ==
+    dependencies:
+      loader-utils "^1.0.2"
+  
+  angular2-template-loader@^0.6.2:
+    version "0.6.2"
+    resolved "https://registry.yarnpkg.com/angular2-template-loader/-/angular2-template-loader-0.6.2.tgz#c0d44e90fff0fac95e8b23f043acda7fd1c51d7c"
+    integrity sha1-wNROkP/w+sleiyPwQ6zaf9HFHXw=
+    dependencies:
+      loader-utils "^0.2.15"
+  
   ansi-align@^2.0.0:
     version "2.0.0"
     resolved "https://registry.yarnpkg.com/ansi-align/-/ansi-align-2.0.0.tgz#c36aeccba563b89ceb556f3690f0b1d9e3547f7f"
@@ -1173,6 +1189,20 @@ Lockfile:
       num2fraction "^1.2.2"
       postcss "^7.0.13"
       postcss-value-parser "^3.3.1"
+  
+  awesome-typescript-loader@^5.2.1:
+    version "5.2.1"
+    resolved "https://registry.yarnpkg.com/awesome-typescript-loader/-/awesome-typescript-loader-5.2.1.tgz#a41daf7847515f4925cdbaa3075d61f289e913fc"
+    integrity sha512-slv66OAJB8orL+UUaTI3pKlLorwIvS4ARZzYR9iJJyGsEgOqueMfOMdKySWzZ73vIkEe3fcwFgsKMg4d8zyb1g==
+    dependencies:
+      chalk "^2.4.1"
+      enhanced-resolve "^4.0.0"
+      loader-utils "^1.1.0"
+      lodash "^4.17.5"
+      micromatch "^3.1.9"
+      mkdirp "^0.5.1"
+      source-map-support "^0.5.3"
+      webpack-log "^1.2.0"
   
   aws-sign2@~0.7.0:
     version "0.7.0"
@@ -1741,7 +1771,7 @@ Lockfile:
       strip-ansi "^3.0.0"
       supports-color "^2.0.0"
   
-  chalk@^2.0.0, chalk@^2.0.1, chalk@^2.3.0, chalk@^2.4.1, chalk@^2.4.2:
+  chalk@^2.0.0, chalk@^2.0.1, chalk@^2.1.0, chalk@^2.3.0, chalk@^2.4.1, chalk@^2.4.2:
     version "2.4.2"
     resolved "https://registry.yarnpkg.com/chalk/-/chalk-2.4.2.tgz#cd42541677a54333cf541a49108c1432b44c9424"
     integrity sha512-Mti+f9lpJNcwF4tWV8/OrTTtF1gZi+f8FqlyAdouralcFWFQWF2+NgCHShjkCb+IFBLq9buZwE1xckQU4peSuQ==
@@ -2504,6 +2534,13 @@ Lockfile:
     resolved "https://registry.yarnpkg.com/cyclist/-/cyclist-0.2.2.tgz#1b33792e11e914a2fd6d6ed6447464444e5fa640"
     integrity sha1-GzN5LhHpFKL9bW7WRHRkRE5fpkA=
   
+  d@1:
+    version "1.0.0"
+    resolved "https://registry.yarnpkg.com/d/-/d-1.0.0.tgz#754bb5bfe55451da69a58b94d45f4c5b0462d58f"
+    integrity sha1-dUu1v+VUUdpppYuU1F9MWwRi1Y8=
+    dependencies:
+      es5-ext "^0.10.9"
+  
   dashdash@^1.12.0:
     version "1.14.1"
     resolved "https://registry.yarnpkg.com/dashdash/-/dashdash-1.14.1.tgz#853cfa0f7cbe2fed5de20326b8dd581035f6e2f0"
@@ -2950,7 +2987,7 @@ Lockfile:
       engine.io-parser "~2.1.0"
       ws "~3.3.1"
   
-  enhanced-resolve@4.1.0, enhanced-resolve@^4.1.0:
+  enhanced-resolve@4.1.0, enhanced-resolve@^4.0.0, enhanced-resolve@^4.1.0:
     version "4.1.0"
     resolved "https://registry.yarnpkg.com/enhanced-resolve/-/enhanced-resolve-4.1.0.tgz#41c7e0bfdfe74ac1ffe1e57ad6a5c6c9f3742a7f"
     integrity sha512-F/7vkyTtyc/llOIn8oWclcB25KdRaiPBpZYDgJHgh/UHtpgT2p2eldQgtQnLtUvfMKPKxbRaQM/hHkvLHt1Vng==
@@ -3009,6 +3046,24 @@ Lockfile:
       is-date-object "^1.0.1"
       is-symbol "^1.0.2"
   
+  es5-ext@^0.10.35, es5-ext@^0.10.9, es5-ext@~0.10.14:
+    version "0.10.49"
+    resolved "https://registry.yarnpkg.com/es5-ext/-/es5-ext-0.10.49.tgz#059a239de862c94494fec28f8150c977028c6c5e"
+    integrity sha512-3NMEhi57E31qdzmYp2jwRArIUsj1HI/RxbQ4bgnSB+AIKIxsAmTiK83bYMifIcpWvEc3P1X30DhUKOqEtF/kvg==
+    dependencies:
+      es6-iterator "~2.0.3"
+      es6-symbol "~3.1.1"
+      next-tick "^1.0.0"
+  
+  es6-iterator@~2.0.3:
+    version "2.0.3"
+    resolved "https://registry.yarnpkg.com/es6-iterator/-/es6-iterator-2.0.3.tgz#a7de889141a05a94b0854403b2d0a0fbfa98f3b7"
+    integrity sha1-p96IkUGgWpSwhUQDstCg+/qY87c=
+    dependencies:
+      d "1"
+      es5-ext "^0.10.35"
+      es6-symbol "^3.1.1"
+  
   es6-promise@^4.0.3:
     version "4.2.6"
     resolved "https://registry.yarnpkg.com/es6-promise/-/es6-promise-4.2.6.tgz#b685edd8258886365ea62b57d30de28fadcd974f"
@@ -3020,6 +3075,14 @@ Lockfile:
     integrity sha1-UQnWLz5W6pZ8S2NQWu8IKRyKUgM=
     dependencies:
       es6-promise "^4.0.3"
+  
+  es6-symbol@^3.1.1, es6-symbol@~3.1.1:
+    version "3.1.1"
+    resolved "https://registry.yarnpkg.com/es6-symbol/-/es6-symbol-3.1.1.tgz#bf00ef4fdab6ba1b46ecb7b629b4c7ed5715cc77"
+    integrity sha1-vwDvT9q2uhtG7Le2KbTH7VcVzHc=
+    dependencies:
+      d "1"
+      es5-ext "~0.10.14"
   
   es6-templates@^0.2.3:
     version "0.2.3"
@@ -5073,7 +5136,7 @@ Lockfile:
       emojis-list "^2.0.0"
       json5 "^1.0.1"
   
-  loader-utils@^0.2.16:
+  loader-utils@^0.2.15, loader-utils@^0.2.16:
     version "0.2.17"
     resolved "https://registry.yarnpkg.com/loader-utils/-/loader-utils-0.2.17.tgz#f86e6374d43205a6e6c60e9196f17c0299bfb348"
     integrity sha1-+G5jdNQyBabmxg6RlvF8Apm/s0g=
@@ -5139,6 +5202,13 @@ Lockfile:
     resolved "https://registry.yarnpkg.com/lodash/-/lodash-4.17.11.tgz#b39ea6229ef607ecd89e2c8df12536891cac9b8d"
     integrity sha512-cQKh8igo5QUhZ7lg38DYWAxMvjSAKG0A8wGSVimP07SIUEK2UO+arSRKbRZWtelMtN5V0Hkwh5ryOto/SshYIg==
   
+  log-symbols@^2.1.0:
+    version "2.2.0"
+    resolved "https://registry.yarnpkg.com/log-symbols/-/log-symbols-2.2.0.tgz#5740e1c5d6f0dfda4ad9323b5332107ef6b4c40a"
+    integrity sha512-VeIAFslyIerEJLXHziedo2basKbMKtTw3vfn5IzG0XTjhAVEJyNHnL2p7vc+wBDSdQuUpNw3M2u6xb9QsAY5Eg==
+    dependencies:
+      chalk "^2.0.1"
+  
   log4js@^4.0.0:
     version "4.1.0"
     resolved "https://registry.yarnpkg.com/log4js/-/log4js-4.1.0.tgz#57983c6a443546a8c8607e9cb045d2a117c27644"
@@ -5154,6 +5224,14 @@ Lockfile:
     version "1.6.1"
     resolved "https://registry.yarnpkg.com/loglevel/-/loglevel-1.6.1.tgz#e0fc95133b6ef276cdc8887cdaf24aa6f156f8fa"
     integrity sha1-4PyVEztu8nbNyIh82vJKpvFW+Po=
+  
+  loglevelnext@^1.0.1:
+    version "1.0.5"
+    resolved "https://registry.yarnpkg.com/loglevelnext/-/loglevelnext-1.0.5.tgz#36fc4f5996d6640f539ff203ba819641680d75a2"
+    integrity sha512-V/73qkPuJmx4BcBF19xPBr+0ZRVBhc4POxvZTZdMeXpJ4NItXSJ/MSwuFT0kQJlCbXvdlZoQQ/418bS1y9Jh6A==
+    dependencies:
+      es6-symbol "^3.1.1"
+      object.assign "^4.1.0"
   
   loose-envify@^1.0.0:
     version "1.4.0"
@@ -5610,6 +5688,11 @@ Lockfile:
     resolved "https://registry.yarnpkg.com/neo-async/-/neo-async-2.6.0.tgz#b9d15e4d71c6762908654b5183ed38b753340835"
     integrity sha512-MFh0d/Wa7vkKO3Y3LlacqAEeHK0mckVqzDieUKTT+KGxi+zIpeVsFxymkIiRpbpDziHc290Xr9A1O4Om7otoRA==
   
+  next-tick@^1.0.0:
+    version "1.0.0"
+    resolved "https://registry.yarnpkg.com/next-tick/-/next-tick-1.0.0.tgz#ca86d1fe8828169b0120208e3dc8424b9db8342c"
+    integrity sha1-yobR/ogoFpsBICCOPchCS524NCw=
+  
   nice-try@^1.0.4:
     version "1.0.5"
     resolved "https://registry.yarnpkg.com/nice-try/-/nice-try-1.0.5.tgz#a3378a7696ce7d223e88fc9b764bd7ef1089e366"
@@ -5885,7 +5968,7 @@ Lockfile:
       define-property "^0.2.5"
       kind-of "^3.0.3"
   
-  object-keys@^1.0.12:
+  object-keys@^1.0.11, object-keys@^1.0.12:
     version "1.1.1"
     resolved "https://registry.yarnpkg.com/object-keys/-/object-keys-1.1.1.tgz#1c47f272df277f3b1daf061677d9c82e2322c60e"
     integrity sha512-NuAESUOUMrlIXOfHKzD6bpPu3tYt3xvjNdRIQ+FeT0lNb4K8WR70CaDxhuNguS2XG+GjkyMwOzsN5ZktImfhLA==
@@ -5896,6 +5979,16 @@ Lockfile:
     integrity sha1-95xEk68MU3e1n+OdOV5BBC3QRbs=
     dependencies:
       isobject "^3.0.0"
+  
+  object.assign@^4.1.0:
+    version "4.1.0"
+    resolved "https://registry.yarnpkg.com/object.assign/-/object.assign-4.1.0.tgz#968bf1100d7956bb3ca086f006f846b3bc4008da"
+    integrity sha512-exHJeq6kBKj58mqGyTQ9DFvrZC/eR6OwxzoM9YRoGBqrXYonaFyGiFMuc9VZrXf7DarreEwMpurG3dd+CNyW5w==
+    dependencies:
+      define-properties "^1.1.2"
+      function-bind "^1.1.1"
+      has-symbols "^1.0.0"
+      object-keys "^1.0.11"
   
   object.getownpropertydescriptors@^2.0.3:
     version "2.0.3"
@@ -7750,6 +7843,14 @@ Lockfile:
       buffer-from "^1.0.0"
       source-map "^0.6.0"
   
+  source-map-support@^0.5.3:
+    version "0.5.12"
+    resolved "https://registry.yarnpkg.com/source-map-support/-/source-map-support-0.5.12.tgz#b4f3b10d51857a5af0138d3ce8003b201613d599"
+    integrity sha512-4h2Pbvyy15EE02G+JOZpUCmqWJuqrs+sEkzewTm++BPi7Hvn/HwcqLAcNxYAyI0x13CpPPn+kMjl+hplXMHITQ==
+    dependencies:
+      buffer-from "^1.0.0"
+      source-map "^0.6.0"
+  
   source-map-support@^0.5.5, source-map-support@^0.5.6, source-map-support@~0.5.10:
     version "0.5.11"
     resolved "https://registry.yarnpkg.com/source-map-support/-/source-map-support-0.5.11.tgz#efac2ce0800355d026326a0ca23e162aeac9a4e2"
@@ -8668,7 +8769,7 @@ Lockfile:
     resolved "https://registry.yarnpkg.com/utils-merge/-/utils-merge-1.0.1.tgz#9f95710f50a267947b2ccc124741c1028427e713"
     integrity sha1-n5VxD1CiZ5R7LMwSR0HBAoQn5xM=
   
-  uuid@^3.0.1, uuid@^3.3.2:
+  uuid@^3.0.1, uuid@^3.1.0, uuid@^3.3.2:
     version "3.3.2"
     resolved "https://registry.yarnpkg.com/uuid/-/uuid-3.3.2.tgz#1b4af4955eb3077c501c23872fc6513811587131"
     integrity sha512-yXJmeNaw3DnnKAOKJE51sL/ZaYfWJRl1pK9dr19YFCu0ObS231AB1/LbqTKRAQ5kw8A90rA6fr4riOUpTZvQZA==
@@ -8891,6 +8992,16 @@ Lockfile:
       webpack-dev-middleware "^3.6.2"
       webpack-log "^2.0.0"
       yargs "12.0.5"
+  
+  webpack-log@^1.2.0:
+    version "1.2.0"
+    resolved "https://registry.yarnpkg.com/webpack-log/-/webpack-log-1.2.0.tgz#a4b34cda6b22b518dbb0ab32e567962d5c72a43d"
+    integrity sha512-U9AnICnu50HXtiqiDxuli5gLB5PGBo7VvcHx36jRZHwK4vzOYLbImqT4lwWwoMHdQWwEKw736fCHEekokTEKHA==
+    dependencies:
+      chalk "^2.1.0"
+      log-symbols "^2.1.0"
+      loglevelnext "^1.0.1"
+      uuid "^3.1.0"
   
   webpack-log@^2.0.0:
     version "2.0.0"
